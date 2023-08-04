@@ -1,0 +1,4 @@
+ro.sf.lcd_density=280
+
+# HideReflashTWRP
+ro.twrp.vendor_boot=true

@@ -1,0 +1,9 @@
+#add for board init.rc for recovery mode
+import /init.recovery.common.rc
+
+on post-fs
+    start boot-hal-1-2
+
+on boot
+    start health-hal-2-1
+    setprop sys.usb.config adb

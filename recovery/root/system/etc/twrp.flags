@@ -1,0 +1,24 @@
+/vbmeta                         emmc     /dev/block/by-name/vbmeta               	flags=display="VBmeta";backup=1;flashimg=1;slotselect
+/vbmeta_product                 emmc     /dev/block/by-name/vbmeta_product		flags=slotselect
+/vbmeta_system_ext              emmc     /dev/block/by-name/vbmeta_system_ext     	flags=slotselect
+/dtbo                           emmc     /dev/block/by-name/dtbo                    	flags=display="Dtbo";backup=1;flashimg=1;slotselect
+/ltedsp                         emmc     /dev/block/by-name/l_ldsp                  	flags=backup=1;slotselect;subpartitionof=/ltemodem
+/ltegdsp                        emmc     /dev/block/by-name/l_gdsp			flags=backup=1;slotselect;subpartitionof=/ltemodem
+/lteagdsp						emmc     /dev/block/by-name/l_agdsp         flags=backup=1;slotselect;subpartitionof=/ltemodem
+/ltecdsp						emmc     /dev/block/by-name/l_cdsp          flags=backup=1;slotselect;subpartitionof=/ltemodem
+/ltemodem                       emmc     /dev/block/by-name/l_modem                 	flags=display="Modem_LTE";backup=1;slotselect
+/ltefixnv1                      emmc     /dev/block/by-name/l_fixnv1                	flags=backup=1;slotselect;subpartitionof=/ltemodem
+/ltefixnv2                      emmc     /dev/block/by-name/l_fixnv2                	flags=backup=1;slotselect;subpartitionof=/ltemodem
+/ltedeltanv						emmc     /dev/block/by-name/l_deltanv                   flags=backup=1;slotselect;subpartitionof=/ltemodem
+/lteruntimenv1                  emmc     /dev/block/by-name/l_runtimenv1            	flags=backup=1;slotselect;subpartitionof=/ltemodem
+/lteruntimenv2                  emmc     /dev/block/by-name/l_runtimenv2            	flags=backup=1;slotselect;subpartitionof=/ltemodem
+/boot                           emmc     /dev/block/by-name/boot_a                  	flags=backup=1;flashimg=1;slotselect
+/persist                        emmc     /dev/block/by-name/persist              	flags=display="Persist"
+/persist_image      		emmc     /dev/block/by-name/persist      		flags=display="Persist Image";backup=1;flashimg=1
+/metadata              			ext4     /dev/block/by-name/metadata              	flags=display="Metadata";backup=1
+/mnt/vendor            		ext4     /dev/block/by-name/prodnv                	flags=display="ProdNV";backup=1
+/mnt/vendor_image       	emmc     /dev/block/by-name/prodnv       		flags=display="ProdNV Image";backup=1;flashimg=1
+
+# Removable storage
+/external_sd	auto	/dev/block/mmcblk1p1	/dev/block/mmcblk1			flags=fsflags=utf8;storage;wipeingui;removable
+/usb-otg	auto	/dev/block/sda1		/dev/block/sda				flags=storage;wipeingui;removable

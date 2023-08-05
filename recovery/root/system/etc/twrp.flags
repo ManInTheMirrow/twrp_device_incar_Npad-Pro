@@ -12,7 +12,7 @@
 /ltedeltanv						emmc     /dev/block/by-name/l_deltanv                   flags=backup=1;slotselect;subpartitionof=/ltemodem
 /lteruntimenv1                  emmc     /dev/block/by-name/l_runtimenv1            	flags=backup=1;slotselect;subpartitionof=/ltemodem
 /lteruntimenv2                  emmc     /dev/block/by-name/l_runtimenv2            	flags=backup=1;slotselect;subpartitionof=/ltemodem
-/boot                           emmc     /dev/block/by-name/boot_a                  	flags=backup=1;flashimg=1;slotselect
+/boot                           emmc     /dev/block/by-name/boot                  	flags=backup=1;flashimg=1;slotselect
 /persist                        emmc     /dev/block/by-name/persist              	flags=display="Persist"
 /persist_image      		emmc     /dev/block/by-name/persist      		flags=display="Persist Image";backup=1;flashimg=1
 /metadata              			ext4     /dev/block/by-name/metadata              	flags=display="Metadata";backup=1

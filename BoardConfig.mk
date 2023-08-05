@@ -41,7 +41,6 @@ TARGET_BOARD_PLATFORM := ums9230
 # Kernel
 TARGET_NO_KERNEL := true
 BOARD_RAMDISK_USE_LZ4 := true
-BOARD_KERNEL_SEPARATED_DTBO := true
 
 TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb
 
@@ -119,7 +118,7 @@ TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_CRYPTO_FBE := true
 TW_INCLUDE_FBE_METADATA_DECRYPT := true
 BOARD_USES_METADATA_PARTITION := true
-#TW_USE_FSCRYPT_POLICY := 1
+TW_USE_FSCRYPT_POLICY := 2
 
 # Properties
 TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
@@ -145,7 +144,8 @@ TW_USE_TOOLBOX := true
 TW_INCLUDE_NTFS_3G := true
 RECOVERY_SDCARD_ON_DATA := true
 TW_BRIGHTNESS_PATH := "/sys/devices/platform/sprd_backlight/backlight/sprd_backlight/brightness"
-#TARGET_USE_CUSTOM_LUN_FILE_PATH := "/config/usb_gadget/g1/functions/mass_storage.gs6/lun.%d/file"
+TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone0/temp
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.gs6/lun.%d/file
 TW_MAX_BRIGHTNESS := 255
 TW_DEFAULT_BRIGHTNESS := 90
 TW_MTP_DEVICE := /dev/mtp_usb
